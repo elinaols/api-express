@@ -25,10 +25,11 @@ router.delete('/:id', function(req, res, next) {
     res.json(post);
     });
 });
+
 // https://www.youtube.com/watch?v=_7UQPve99r4 - inspiration
 // https://stackoverflow.com/questions/40330916/updating-a-record-with-mongoose - recommends CarModel.findByIdAndUpdate({"_id": req.params.id}, req.body)
 // don´t now if it works
-/*
+
 router.put('/:id', function(req, res, next){
     const {id} = req.params;
     RecipiesModel.findByIdAndUpdate(id, req.body)
@@ -40,5 +41,5 @@ router.put('/:id', function(req, res, next){
         next(error)
     })
 })
-*/
+
 module.exports = router;
