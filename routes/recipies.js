@@ -26,10 +26,8 @@ router.delete('/:id', function(req, res, next) {
     });
 });
 
-// https://www.youtube.com/watch?v=_7UQPve99r4 - inspiration
-// https://stackoverflow.com/questions/40330916/updating-a-record-with-mongoose - recommends CarModel.findByIdAndUpdate({"_id": req.params.id}, req.body)
-// don´t now if it works
-
+// Saves the updated values to the specified recepie
+// Code from https://www.youtube.com/watch?v=_7UQPve99r4
 router.put('/:id', function(req, res, next){
     const {id} = req.params;
     RecipiesModel.findByIdAndUpdate(id, req.body)
