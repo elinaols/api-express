@@ -34,7 +34,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/recepies', recipiesRouter);
-app.use(cors());
+app.use(cors({
+  origin: 'https://elinaols.github.io/RN-kitchen_archive/'
+}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
